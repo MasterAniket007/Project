@@ -1,0 +1,151 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Now</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #3498db; /* Blue background color */
+            margin: 0;
+            padding: 0;
+        }
+
+        .signup-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .signup-container h1 {
+            text-align: center;
+            font-size: 36px;
+            color: #3498db;
+            margin-bottom: 20px;
+        }
+
+        .signup-container form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .signup-container label {
+            margin-bottom: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .signup-container input {
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .signup-container button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .signup-container button:hover {
+            background-color: #1f628e;
+        }
+
+        .signup-container .back-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .signup-container .back-link a {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        .signup-container .back-link a:hover {
+            color: #1f628e;
+        }
+
+        .go-back-box {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .go-back-box button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .go-back-box button:hover {
+            background-color: #1f628e;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="signup-container">
+        <h1>Sign Up Now</h1>
+        <form action="signup_process.jsp" method="post" onsubmit="return showConfirmation();">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirm your password" required>
+
+            <button type="submit">Sign Up</button>
+        </form>
+        <div class="back-link">
+            <p>Already have an account? <a href="home.html">Go back to Home</a></p>
+        </div>
+        <div class="go-back-box">
+            <button onclick="goBackHome()">Go Back to Home</button>
+        </div>
+    </div>
+
+    <script>
+        function showConfirmation() {
+            alert("Your account has been created successfully!");
+            // Redirect to the login page after the alert
+            setTimeout(function() {
+                window.location.href = "login.jsp";
+            }, 100); // 100 milliseconds delay to ensure the alert is shown before redirecting
+            // Return false to prevent immediate form submission
+            return false;
+        }
+
+        function goBackHome() {
+            window.location.href = "home.html";
+        }
+    </script>
+
+</body>
+
+</html>

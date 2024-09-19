@@ -1,0 +1,194 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #4285f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Main container styling */
+#main {
+    width: 80%;
+    margin: 20px auto;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Header styling */
+#header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 32px;
+    border-bottom: 2px solid #297fb8;
+}
+
+/* Menu styling */
+#menu {
+    background-color: #297fb8;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #1f628e;
+}
+
+#menu a {
+    color: #fff;
+    margin: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+#menu a:hover {
+    color: #1f628e;
+}
+
+/* Content box container styling */
+#contentbox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+/* Box styling for individual sections */
+.box {
+    background-color: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-sizing: border-box;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+    transform: scale(1.05);
+}
+
+/* Container inside box */
+.container {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}
+
+/* Title bar styling */
+.titlebar {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Mbox2 specific styling (e.g., promotion box) */
+#mbox2 {
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#mbox2 h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+#mbox2 p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #fff;
+}
+
+/* Subscribe box styling */
+.subscribe-box {
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.subscribe-box label {
+    display: block;
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.subscribe-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.subscribe-box button {
+    background-color: #fff;
+    color: #3498db;
+    padding: 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.subscribe-box button:hover {
+    background-color: #1f628e;
+    color: #fff;
+}
+
+.subscribe-box .signup-link {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+}
+
+.subscribe-box .signup-link a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease-in-out;
+}
+
+.subscribe-box .signup-link a:hover {
+    color: #1f628e;
+}
+
+/* Responsive design adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    #main {
+        width: 95%;
+    }
+
+    #contentbox {
+        flex-direction: column;
+    }
+
+    .box {
+        width: 100%;
+    }
+}
